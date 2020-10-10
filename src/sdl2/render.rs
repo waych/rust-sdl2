@@ -93,6 +93,7 @@ impl fmt::Display for TargetRenderError {
 impl Error for TargetRenderError {
     fn description(&self) -> &str {
         use self::TargetRenderError::*;
+        #[allow(deprecated)]
         match *self {
             SdlError(ref e) => e.description(),
             NotSupported => "The renderer does not support the use of render targets",
