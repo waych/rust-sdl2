@@ -2762,6 +2762,7 @@ mod test {
 }
 
 /// A sendible type that can push events to the event queue.
+#[derive(Clone)]
 pub struct EventSender {
     _priv: (),
 }
